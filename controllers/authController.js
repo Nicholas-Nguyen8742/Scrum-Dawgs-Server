@@ -7,23 +7,18 @@ const authenticate = require('../middleware/authenticate');
 // [ROUTE] - "/auth/register"
 // [POST] - Creates new user through registration
 exports.register = (req, res) => {
-    const { firstName, lastName, email, type, city, state, password, profile } = req.body;
+    const { name, email, password } = req.body;
 
-    // if (!firstName || !lastName || !email || !type || !city || !state || !password) {
+    // if (!name || !email || !password) {
     //     return res.status(400).send("Please enter the required fields.");
     // }
 
     const hashedPassword = bcrypt.hashSync(password, 12);
 
     const user = {
-        type: type,
-        firstName: firstName, 
-        lastName: lastName, 
+        name: name, 
         email: email, 
-        city: city, 
-        state: state,
         password: hashedPassword,
-        profile: profile
     };
 
     knex('users')
