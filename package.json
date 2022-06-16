@@ -12,6 +12,7 @@
   "author": "Alisa Promthep, Fatima Abrar, Rolake Olonisakin, Jacky Du, Josh Clopton, Octavio Segovia, Nicholas Nguyen",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "casual": "^1.6.2",
     "cors": "^2.8.5",
@@ -23,6 +24,7 @@
     "knex": "^2.1.0",
     "mongodb": "^4.7.0",
     "mongoose": "^6.3.8",
+    "morgan": "^1.10.0",
     "passport": "^0.6.0"
   },
   "devDependencies": {
