@@ -5,13 +5,13 @@ router
     .route('/register')
     .post(authController.register);
 
-router
-    .route('/login')
-    .post(authController.login);
+// router
+//     .route('/login')
+//     .post(authController.login);
 
-router 
-    .route('/current')
-    .get(authController.current);
+// router 
+//     .route('/current')
+//     .get(authController.current);
 
 
 module.exports = router;
