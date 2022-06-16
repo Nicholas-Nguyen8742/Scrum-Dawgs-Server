@@ -21,7 +21,7 @@
     "helmet": "^5.1.0",
     "jsonwebtoken": "^8.5.1",
     "knex": "^2.1.0",
-    "mongoose": "^6.3.8",
+    "mongodb": "^4.7.0",
     "passport": "^0.6.0"
   },
   "devDependencies": {
