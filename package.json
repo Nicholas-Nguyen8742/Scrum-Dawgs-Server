@@ -9,7 +9,7 @@
     "dev": "nodemon index",
     "start": "node index"
   },
-  "author": "",
+  "author": "Alisa Promthep, Fatima Abrar, Rolake Olonisakin, Jacky Du, Josh Clopton, Octavio Segovia, Nicholas Nguyen",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
