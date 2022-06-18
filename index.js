@@ -10,9 +10,11 @@ app.use(express.json()); // Enable req.body middleware
 
 // Import routes from ${./routes} directory
 const authRoutes = require("./routes/authRoute");
+const githubRoutes = require("./routes/githubRoute");
 
 // Root url for respective routes
 app.use('/auth', authRoutes);
+app.use('/github', githubRoutes);
 
 
 app.listen(PORT, () => {
