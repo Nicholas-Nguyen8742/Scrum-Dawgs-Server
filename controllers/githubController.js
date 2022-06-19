@@ -1,1 +1,2 @@
-const knex = require('knex')(require('../knexfile'));
+const passport = require('passport');
+require('dotenv').config();

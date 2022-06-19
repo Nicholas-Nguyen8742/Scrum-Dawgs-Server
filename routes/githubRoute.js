@@ -19,4 +19,16 @@ router
     .route('/profile')
     .get(githubController.profile);
 
+// [ROUTE] - '/github/logout'
+// [GET] - Logout Endpoint for Github User
+router 
+    .route('/logout')
+    .get(githubController.logout);
+
+// [ROUTE] - '/github/success-callback'
+// [GET] - Success Callback for Github User logout
+router 
+    .route('/success-callback')
+    .get(githubController.success)
+
 module.exports = router;
