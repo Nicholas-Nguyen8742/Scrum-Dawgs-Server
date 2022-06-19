@@ -29,6 +29,6 @@ router
 // [GET] - Success Callback for Github User logout
 router 
     .route('/success-callback')
-    .get(githubController.success)
+    .get(githubController.successLogout)
 
 module.exports = router;
