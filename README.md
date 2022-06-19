@@ -26,6 +26,11 @@
 | GET      | /projects/:projectID/users         | projectUsers    | Retrieve single project's users        |
 | GET      | /projects/:projectID/tasks         | projectTasks    | Retrieve single project's tasks        |
 
+#### Tasks
+| Method   | URL                                | Controller      | Description                            |
+| -------- | ---------------------------------- | --------------- | -------------------------------------- |
+| GET      | /tasks                             | allTasks        | Retrieve all tasks data                |
+
 #### Auth
 | Method   | URL                                | Controller      | Description                            |
 | -------- | ---------------------------------- | --------------- | -------------------------------------- |
