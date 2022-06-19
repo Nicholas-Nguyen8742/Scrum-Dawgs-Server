@@ -98,10 +98,12 @@ passport.deserializeUser((userId, done) => {
 // Import routes from ${./routes} directory
 const authRoutes = require("./routes/authRoute");
 const githubRoutes = require("./routes/githubRoute");
+const userRoutes = require("./routes/userRoute");
 
 // Root url for respective routes
 app.use("/auth", authRoutes);
 app.use("/github", githubRoutes);
+app.user("/users", userRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
