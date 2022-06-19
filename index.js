@@ -25,7 +25,7 @@ app.use(
   })
 ); // Include express-session middleware (with additional config options required for Passport session)
 
-/*Passport Configuration*/
+/*Passport Configuration For Github*/ /*https://abhishekch09.medium.com/social-authentication-with-node-js-passport-and-jwt-in-spa-493e0d6fdc05*/
 app.use(passport.initialize()); // Initialize Passport Middleware
 app.use(passport.session()); // Passport.session middleware alters the `req` object with the `user` value by converting session id from the client cookie into a deserialized user object.
 // Initialize GitHub strategy middleware
@@ -92,6 +92,8 @@ passport.deserializeUser((userId, done) => {
       console.log('Error finding user', err);
     });
 });
+// ========================================= //
+
 
 // Import routes from ${./routes} directory
 const authRoutes = require("./routes/authRoute");
