@@ -16,7 +16,7 @@ router
 // [ROUTE] - '/users/:userID/projects'
 router 
     .route('/:userID/projects')
-    .get(userController.allProjects)
+    .get(userController.userProjects)
     .post(userController.newProject);
 
 // [ROUTE] - '/users/:userID/projects/:projectID'
@@ -39,4 +39,4 @@ router
     .put(userController.updateTask)
     .delete(userController.delete);
 
-    module.exports = router;
+module.exports = router;
