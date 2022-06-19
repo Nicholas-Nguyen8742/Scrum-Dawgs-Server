@@ -3,7 +3,7 @@ const projectsController = require('../controllers/projectsController');
 
 /* [ROUTE] - '/projects/:projectID/tasks' */
 router
-    .route('/tasks')
+    .route('/:projectID/tasks')
     .get(projectsController.projectTasks);
 
 module.exports = router;
