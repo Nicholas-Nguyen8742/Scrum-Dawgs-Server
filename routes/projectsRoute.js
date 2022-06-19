@@ -3,12 +3,12 @@ const projectsController = require('../controllers/projectsController');
 
 /* [ROUTE] - '/projects' */
 router
-    .route('/projects')
+    .route('/')
     .get(projectsController.allProjects);
 
 /* [ROUTE] - '/projects/:projectID/users' */
 router 
-    .route('/projects/:projectID/users')
+    .route('/:projectID/users')
     .get(projectsController.projectUsers);
 
 /* [ROUTE] - '/projects/:projectID/tasks' */
