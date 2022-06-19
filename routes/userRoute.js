@@ -4,7 +4,7 @@ const userController = require('../controllers/userController');
 // [ROUTE] - '/users'
 router 
     .route('/')
-    .get(userController.index);
+    .get(userController.indexUsers);
 
 // [ROUTE] - '/users/:userID'
 router
@@ -24,12 +24,12 @@ router
     .route('/:userID/projects/:projectID')
     .get(userController.singleProject)
     .put(userController.updateProject)
-    .delete(userController.delete);
+    .delete(userController.deleteProject);
 
 // [ROUTE] - '/users/:userID/tasks'
 router 
     .route('/:userID/tasks')
-    .get(userController.allTasks)
+    .get(userController.userTasks)
     .post(userController.newTask);
 
 // [ROUTE] - '/users/:userID/tasks/:taskID'
@@ -37,6 +37,6 @@ router
     .route('/:userID/tasks/:taskID')
     .get(userController.singleTask)
     .put(userController.updateTask)
-    .delete(userController.delete);
+    .delete(userController.deleteTask);
 
 module.exports = router;

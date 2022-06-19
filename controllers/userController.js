@@ -2,8 +2,13 @@ const knex = require('knex')(require('../knexfile'));
 
 /* [ROUTE] - '/users' */
 // [GET] - Gets all users
-exports.index = (req, res) => {
-
+exports.indexUsers = (req, res) => {
+    knex('users')
+    .select('id', 'name', 'avatar_url', 'email')
+    .then((data) => {
+      res.status(200).json(data);
+    })
+    .catch((err) => res.status(400).send(`Error retrieving Users: ${err}`));
 };
 
 
@@ -49,5 +54,34 @@ exports.updateProject = (req, res) => {
 
 // [DELETE] - Deletes single project of a user
 exports.deleteProject = (req, res) => {
+
+};
+
+
+/* [ROUTE] - '/users/:userID/tasks' */
+// [GET] - Get all tasks of user
+exports.userTasks = (req, res) => {
+
+};
+
+// [POST] - Add new task by user
+exports.newTask = (req, res) => {
+
+};
+
+
+/* [ROUTE] - '/users/:userID/tasks/:taskID' */
+// [GET] - Gets single task of user
+exports.singleTask = (req, res) => {
+
+};
+
+// [PUT] - Updates single task of user
+exports.updateTask = (req, res) => {
+
+};
+
+// [DELETE] - Deletes single task of user 
+exports.deleteTask = (req, res) => {
 
 };
