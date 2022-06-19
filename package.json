@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "migrate": "knex migrate:latest",
+    "migrate:down": "knex migrate:down",
+    "migrate:rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
     "dev": "nodemon index",
     "start": "node index"

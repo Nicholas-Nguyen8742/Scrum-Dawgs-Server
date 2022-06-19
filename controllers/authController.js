@@ -1,7 +1,6 @@
 const knex = require("knex")(require("../knexfile"));
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const authenticate = require("../middleware/authenticate");
 
 // [ROUTE] - "/auth/register"
 // [POST] - Creates new user through registration
@@ -67,7 +66,7 @@ exports.login = (req, res) => {
 
 // [ROUTE] - "/auth/current"
 // [GET] - Gets currently logged in user to validate JWT authentication
-exports.current = (authenticate, (req, res) => {
+exports.current = (req, res) => {
     knex("users")
       .where({ email: decoded.email })
       .first()
@@ -76,4 +75,4 @@ exports.current = (authenticate, (req, res) => {
         delete user.password;
         res.json(user);
     });
-});
+};

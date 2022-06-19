@@ -1,17 +1,19 @@
 const router = require('express').Router();
 const githubController = require('../controllers/githubController');
+const passport = require("passport");
+const passportGithub = require('../middleware/githubAuth');
 
 // [ROUTE] - '/github'
 // [GET] - Create login endpoint for Github auth process needs authenticate call back.
 router
     .route('/')
-    .get(githubController.inital);
+    .get(passport.authenticate('github', { scope: [ 'user:email' ] }));
 
 // [ROUTE] - '/github/callback'
 // [GET] - Github Auth Callback that Github redirects to after user responds 
 router 
     .route('/callback')
-    .get(githubController.callback);
+    .get(passportGithub, githubController.callback);
 
 // [ROUTE] - '/github/profile'
 // [GET] - User profile endpoint requires authentication

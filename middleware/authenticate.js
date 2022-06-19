@@ -1,6 +1,7 @@
+/*JWT Authenticate Middleware*/
 const jwt = require('jsonwebtoken');
 
-// - Expected headers: { Authorization: "Bearer JWT_TOKEN_HERE" }
+// Expected headers: { Authorization: "Bearer JWT_TOKEN_HERE" }
 const authenticate = (req, res, next) => {
     // If there is no auth header provided
     if (!req.headers.authorization) {

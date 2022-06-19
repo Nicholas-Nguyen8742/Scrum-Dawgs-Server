@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const authController = require('../controllers/authController');
+const authenticate = require("../middleware/authenticate");
 
 router
     .route('/register')
@@ -11,7 +12,7 @@ router
 
 router 
     .route('/current')
-    .get(authController.current);
+    .get(authenticate, authController.current);
 
 
 module.exports = router;
