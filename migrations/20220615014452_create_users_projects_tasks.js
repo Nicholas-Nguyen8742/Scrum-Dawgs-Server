@@ -6,15 +6,17 @@ exports.up = function (knex) {
   return knex.schema
     .createTable("users", (table) => {
       table.increments("id").primary();
+      table.string('avatar_url').notNullable();
       table.string("name").notNullable();
       table.string("email").notNullable();
       table.string("password").notNullable().unique();
-      table.string("profile").nullable();
+      table.timestamp('updated_at').defaultTo(knex.fn.now());
     })
     .createTable("projects", (table) => {
       table.increments("id").primary();
       table.string("title").notNullable();
       table.string("description").notNullable();
+      table.timestamp('updated_at').defaultTo(knex.fn.now());
       table
         .integer("sponsorID")
         .unsigned()
@@ -28,6 +30,7 @@ exports.up = function (knex) {
       table.increments("id").primary();
       table.string("title").notNullable();
       table.string("description").notNullable();
+      table.timestamp('updated_at').defaultTo(knex.fn.now());
       table
         .integer("projectID")
         .unsigned()

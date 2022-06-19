@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "migrate": "knex migrate:latest",
+    "migrate:down": "knex migrate:down",
+    "migrate:rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
     "dev": "nodemon index",
     "start": "node index"
@@ -22,7 +24,8 @@
     "jsonwebtoken": "^8.5.1",
     "knex": "^2.1.0",
     "mysql": "^2.18.1",
-    "passport": "^0.6.0"
+    "passport": "^0.6.0",
+    "passport-github2": "^0.1.12"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
