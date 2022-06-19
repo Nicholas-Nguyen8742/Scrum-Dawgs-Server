@@ -1,6 +1,7 @@
 const knex = require("knex")(require("../knexfile"));
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 // [ROUTE] - "/auth/register"
 // [POST] - Creates new user through registration

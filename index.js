@@ -5,7 +5,7 @@ const cors = require("cors");
 const helmet = require("helmet"); // Add http headers, small layer of security
 const passport = require("passport"); // Passport Library Import
 const GitHubStrategy = require("passport-github2").Strategy; // Github Strategy
-const knex = require("knex")(require("./knexfile.js").development); // Knex Instance
+const knex = require("knex")(require("./knexfile.js")); // Knex Instance
 const app = express();
 const PORT = process.env.PORT || 8080;
 
