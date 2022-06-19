@@ -45,6 +45,22 @@ Create new schema in MySQL Workbench named scrum_dawgs. Ensure configuration for
 | GET      | /projects/:projectID/users         | projectUsers    | Retrieve single project's users        |
 | GET      | /projects/:projectID/tasks         | projectTasks    | Retrieve single project's tasks        |
 
+#### Auth
+| Method   | URL                                | Controller      | Description                            |
+| -------- | ---------------------------------- | --------------- | -------------------------------------- |
+| POST     | /auth/register                     | register        | Register new user account              |
+| POST     | /auth/login                        | login           | Login user account                     |
+| GET      | /auth/current                      | current         | Ensure authentication of user          |
+
+#### GitHub
+| Method   | URL                                | Controller      | Description                            |
+| -------- | ---------------------------------- | --------------- | -------------------------------------- |
+| GET      | /github                            | github          | Login endpoint for GitHub auth         |
+| GET      | /github/callback                   | callback        | Github Auth Callback w/ redirect       |
+| GET      | /github/profile                    | profile         | Ensure authentication of user          |
+| GET      | /github/logout                     | logout          | Logout endpoint for GitHub user        |
+| GET      | /github/success-callback           | successLogout   | Success Callback for Github logout     |
+
 
 
 ### dotenv Configurations

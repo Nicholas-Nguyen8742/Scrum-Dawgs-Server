@@ -7,7 +7,7 @@ const passportGithub = require('../middleware/githubAuth');
 // [GET] - Create login endpoint for Github auth process needs authenticate call back.
 router
     .route('/')
-    .get(passport.authenticate('github', { scope: [ 'user:email' ] }));
+    .get(githubController.github);
 
 // [ROUTE] - '/github/callback'
 // [GET] - Github Auth Callback that Github redirects to after user responds 
