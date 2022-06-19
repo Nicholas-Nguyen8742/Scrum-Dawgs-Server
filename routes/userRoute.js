@@ -1,6 +1,11 @@
 const router = require('express').Router();
 const userController = require('../controllers/userController');
 
+// [ROUTE] - '/users'
+router 
+    .route('/')
+    .get(userController.index);
+
 // [ROUTE] - '/users/:userID'
 router
     .route('/:userID')
