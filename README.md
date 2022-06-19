@@ -1,24 +1,5 @@
 # Scrum Dawgs Server
 
-### Run Locally
-Create new schema in MySQL Workbench named scrum_dawgs. Ensure configuration for Local Database Instance is configured correctly in knexfile.js for host, user, password. Ensure that your MySQL server is running, then run the following scripts: 
-```
-  npm run migrate
-  npm run start
-```
-
-### NPM Scripts 
-```
-  "scripts": {
-    "migrate": "knex migrate:latest",
-    "migrate:down": "knex migrate:down",
-    "migrate:rollback": "knex migrate:rollback",
-    "seed": "knex seed:run",
-    "dev": "nodemon index",
-    "start": "node index"
-  },
-```
-
 ### REST API Documentation
 #### Users
 | Method   | URL                                | Controller      | Description                            |
@@ -61,7 +42,24 @@ Create new schema in MySQL Workbench named scrum_dawgs. Ensure configuration for
 | GET      | /github/logout                     | logout          | Logout endpoint for GitHub user        |
 | GET      | /github/success-callback           | successLogout   | Success Callback for Github logout     |
 
+### Run Locally
+Create new schema in MySQL Workbench named scrum_dawgs. Ensure configuration for Local Database Instance is configured correctly in knexfile.js for host, user, password. Ensure that your MySQL server is running, then run the following scripts: 
+```
+  npm run migrate
+  npm run start
+```
 
+### NPM Scripts 
+```
+  "scripts": {
+    "migrate": "knex migrate:latest",
+    "migrate:down": "knex migrate:down",
+    "migrate:rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "dev": "nodemon index",
+    "start": "node index"
+  },
+```
 
 ### dotenv Configurations
 
